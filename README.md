@@ -24,6 +24,10 @@ Simplest way to build project. Just import or clone repo and click "Build". Simp
 ### Command line
 Just run `msbuild /m /p:Configuration=Release .`
 
+## Screenshots
+
+![alt text](https://i.imgur.com/L6Dez7o.png)
+
 ## License
 
 [MPL-2.0](https://github.com/TheEasyPeasy/Java-Runtime-ClassDumper/blob/master/LICENSE)
