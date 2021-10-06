@@ -1,6 +1,7 @@
 #include "jvm_dumper.h"
 #include "MinHook.h"
 #include <stdio.h>
+#include <ShlObj_core.h>
 
 /* Convert java string to UTF char*. Use local buffer if possible,
    otherwise malloc new memory. Returns null IFF malloc failed. */
@@ -53,7 +54,7 @@ jclass JNICALL hookedDefineClass(JNIEnv* env, jobject loader, jstring name, jbyt
 	else {
 		goto free_mem;
 	}
-	printf("Class name %s", utfName);
+	printf("Class name %s\n", utfName);
 	#ifdef SKIP_JAVA_CLASSES 
 	if (strstr(utfName, "java.lang")) {
 		goto free_mem;
@@ -61,7 +62,7 @@ jclass JNICALL hookedDefineClass(JNIEnv* env, jobject loader, jstring name, jbyt
 	#endif
 	char finalName[128];
 	snprintf(finalName, 128, "%s.class", utfName);
-	const char* folder = "C:\\JavaClassDump\\";
+	const char* folder = "C:\\JavaClassDump\\"; //TODO create dir if not exists
 	char fullPath[1024];
 	snprintf(fullPath, 1024, "%s%s", folder, finalName);
 	FILE* out = fopen(fullPath, "wb");
