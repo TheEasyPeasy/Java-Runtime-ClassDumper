@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Pliki źródłowe">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Pliki zasobów">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\jvm">
+      <UniqueIdentifier>{241b1182-43a5-456d-b1ee-4fa48a48f9b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\hook">
+      <UniqueIdentifier>{03c91b0f-0162-4f9f-8ee3-611fe0aff882}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\hook">
+      <UniqueIdentifier>{325f6a1f-25dc-41e3-afb7-6fed30d4e55f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.c">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="jvm_dumper.c">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="hde32.c">
+      <Filter>Pliki źródłowe\hook</Filter>
+    </ClCompile>
+    <ClCompile Include="hde64.c">
+      <Filter>Pliki źródłowe\hook</Filter>
+    </ClCompile>
+    <ClCompile Include="buffer.c">
+      <Filter>Pliki źródłowe\hook</Filter>
+    </ClCompile>
+    <ClCompile Include="hook.c">
+      <Filter>Pliki źródłowe\hook</Filter>
+    </ClCompile>
+    <ClCompile Include="trampoline.c">
+      <Filter>Pliki źródłowe\hook</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="jvm_dumper.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="jni.h">
+      <Filter>Pliki nagłówkowe\jvm</Filter>
+    </ClInclude>
+    <ClInclude Include="jni_md.h">
+      <Filter>Pliki nagłówkowe\jvm</Filter>
+    </ClInclude>
+    <ClInclude Include="buffer.h">
+      <Filter>Pliki nagłówkowe\hook</Filter>
+    </ClInclude>
+    <ClInclude Include="trampoline.h">
+      <Filter>Pliki nagłówkowe\hook</Filter>
+    </ClInclude>
+    <ClInclude Include="hde32.h">
+      <Filter>Pliki nagłówkowe\hook</Filter>
+    </ClInclude>
+    <ClInclude Include="hde64.h">
+      <Filter>Pliki nagłówkowe\hook</Filter>
+    </ClInclude>
+    <ClInclude Include="pstdint.h">
+      <Filter>Pliki nagłówkowe\hook</Filter>
+    </ClInclude>
+    <ClInclude Include="table32.h">
+      <Filter>Pliki nagłówkowe\hook</Filter>
+    </ClInclude>
+    <ClInclude Include="table64.h">
+      <Filter>Pliki nagłówkowe\hook</Filter>
+    </ClInclude>
+    <ClInclude Include="MinHook.h">
+      <Filter>Pliki nagłówkowe\hook</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
