@@ -1,7 +1,9 @@
 #include "jvm_dumper.h"
 #include "MinHook.h"
 #include <stdio.h>
-#include <ShlObj_core.h>
+
+
+const char* folderName = "C:\\JavaClassDump\\";
 
 /* Convert java string to UTF char*. Use local buffer if possible,
    otherwise malloc new memory. Returns null IFF malloc failed. */
@@ -62,9 +64,8 @@ jclass JNICALL hookedDefineClass(JNIEnv* env, jobject loader, jstring name, jbyt
 	#endif
 	char finalName[128];
 	snprintf(finalName, 128, "%s.class", utfName);
-	const char* folder = "C:\\JavaClassDump\\"; //TODO create dir if not exists
 	char fullPath[1024];
-	snprintf(fullPath, 1024, "%s%s", folder, finalName);
+	snprintf(fullPath, 1024, "%s%s", folderName, finalName);
 	FILE* out = fopen(fullPath, "wb");
 	fwrite(body, 1, (*env)->GetArrayLength(env, data), out);
 	fclose(out);
@@ -108,5 +109,6 @@ void hookSetup(void) {
 		puts("Enabling hook failed!");
 		return;
 	}
+	CreateDirectoryA(folderName, NULL);
 	puts("Java Runtime Class Dumper created by TheEasyPeasy (https://github.com/TheEasyPeasy)");
 }
